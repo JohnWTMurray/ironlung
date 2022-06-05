@@ -9,7 +9,7 @@ FetchContent_MakeAvailable(cpr)
 include_directories(src)
 
 
-add_executable(ironlung src/main.cpp src/game.cpp src/line.cpp src/gameobject.cpp src/polygon.cpp)
+add_executable(ironlung src/main.cpp src/game.cpp src/line.cpp src/gameobject.cpp src/polygon.cpp src/rainbow.cpp)
 target_include_directories(ironlung PRIVATE include/)
 
 

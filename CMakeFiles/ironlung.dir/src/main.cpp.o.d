@@ -493,4 +493,5 @@ CMakeFiles/ironlung.dir/src/main.cpp.o: /home/risk/ironlung/src/main.cpp \
  /usr/include/SDL2/SDL_opengl_glext.h \
  /home/risk/ironlung/include/line.hpp \
  /home/risk/ironlung/include/util.hpp \
- /home/risk/ironlung/include/polygon.hpp
+ /home/risk/ironlung/include/polygon.hpp \
+ /home/risk/ironlung/include/rainbow.hpp

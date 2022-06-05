@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ironlung.dir/src/main.cpp.o.d"
   "CMakeFiles/ironlung.dir/src/polygon.cpp.o"
   "CMakeFiles/ironlung.dir/src/polygon.cpp.o.d"
+  "CMakeFiles/ironlung.dir/src/rainbow.cpp.o"
+  "CMakeFiles/ironlung.dir/src/rainbow.cpp.o.d"
   "ironlung"
   "ironlung.pdb"
 )

@@ -1,6 +1,8 @@
 #include "game.hpp"
 #include "line.hpp"
 #include "polygon.hpp"
+#include "rainbow.hpp"
+
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_events.h>
 #include <SDL2/SDL_keyboard.h>
@@ -31,9 +33,9 @@ Game::~Game() { // deconstructor
 // STATIC
 Game* Game::get_instance() { // static method
 	if (!pinstance) {
-		pinstance = new Game();
+		Game::pinstance = new Game();
 	}
-	return pinstance;
+	return Game::pinstance;
 }
 
 // PRIVATE
@@ -42,12 +44,18 @@ void Game::render() {
 	// SDL_SetRenderDrawColor(prender, 255, 255, 255, 255);  // white bg
 	SDL_SetRenderDrawColor(prender, 0, 0, 0, 255); // black bg
 	SDL_RenderClear(prender);
+
 	if (lines.size() > 0) {
 		for (Line ln : lines) {
 			ln.render_self();
 		}
 	}
 	po->render_self();
+	rain->render_self();
+
+	SDL_SetRenderDrawColor(this->prender, 0, 255, 0, SDL_ALPHA_OPAQUE); // lime green
+	SDL_RenderFillRect(this->prender, &this->rec);
+
 	SDL_RenderPresent(prender);
 }
 
@@ -63,7 +71,7 @@ void Game::gameloop() {
 				live = false;
 			}
 			if (event.type == SDL_KEYDOWN) {
-				SDL_Keycode key = event.key.keysym.sym; 
+				SDL_Keycode key = event.key.keysym.sym;
 				// key == SDLK_x
 				// if (key == SDLK_UP)  // example
 				if (key == SDLK_ESCAPE)
@@ -97,8 +105,8 @@ Game::Game() { // constructor
 			psurface = SDL_CreateRGBSurface(0, WIDTH, HEIGHT, 32, 0, 0, 0, 0);
 			rec = SDL_Rect{20, 20, 50, 50};
 			cursor = {0, 0};
-			// this place is a shithole.
 			po = new Polygon(triangle, prender);
+			rain = new Rainbow(prender, 50, Point{HEIGHT / 3, WIDTH / 3}, 100, 200);
 			gameloop();
 		}
 		else {

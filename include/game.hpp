@@ -16,6 +16,7 @@
 
 #include "line.hpp"
 #include "polygon.hpp"
+#include "rainbow.hpp"
 
 struct {
 	int x;
@@ -27,7 +28,7 @@ struct {
 class Game {
 	static Game* pinstance;
 	SDL_Window* pwindow;
-	SDL_Renderer* prender; // this is bad of course.
+	SDL_Renderer* prender;
 	SDL_Surface* psurface;
 	SDL_Rect rec;
 
@@ -35,6 +36,7 @@ class Game {
 	std::vector<Line> lines;
 	std::vector<Polygon*> polygons;
 	Polygon* po;
+	Rainbow* rain;
 
 	void gameloop();
 	void render();

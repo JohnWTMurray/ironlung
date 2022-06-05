@@ -7,11 +7,11 @@ Polygon::Polygon(EShape sh, SDL_Renderer* rn) {
 	radius = 150;
 	renderer = rn;
 	angle = 0;
-	Colour rgb = {0, 254, 0};
+	rgb = {0, 254, 0};
 	update_position();
-	this->sh = sh;
+	this->shape = sh;
 
-	double inc = (360.0 / sh);
+	double inc = (360.0 / this->shape);
 	for (int i = 0; i <= 360; i += inc) {
 		int ang = i;
 		int x = core.x + round(cos(asradian(ang)) * radius);
@@ -26,15 +26,19 @@ Polygon::~Polygon() {
  	// do nothing
 }
 
+void Polygon::tick() {
+
+}
+
 void Polygon::click() {
-	if (this->sh <= 10)  {
-		this->sh += 1;
+	if (this->shape <= 10) {
+		this->shape += 1;
 	}
 	else {
-		this->sh = 2;
+		this->shape = 2;
 	}
 	points.clear();
-	double inc = (360.0 / sh);
+	double inc = (360.0 / this->shape);
 	for (int i = 0; i <= 360; i += inc) {
 		int ang = i;
 		int x = core.x + round(cos(asradian(ang)) * radius);
@@ -56,7 +60,7 @@ void Polygon::update_position(int x, int y) { // overload.
 }
 
 void Polygon::calculate_end() {
-	double inc = (360.0 / sh);
+	double inc = (360.0 / this->shape);
 	int i = 0;
 	for (Point &pnt : points) {
 		int ang = this->angle + i;

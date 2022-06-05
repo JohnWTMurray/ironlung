@@ -25,6 +25,11 @@
   "file": "/home/risk/ironlung/src/polygon.cpp"
 },
 {
+  "directory": "/home/risk/ironlung",
+  "command": "/usr/bin/c++  -I/home/risk/ironlung/src -I/home/risk/ironlung/include -I/home/risk/ironlung/_deps/cpr-src/include -I/home/risk/ironlung/_deps/cpr-build/cpr_generated_includes -I/home/risk/ironlung/_deps/curl-src/include -g -o CMakeFiles/ironlung.dir/src/rainbow.cpp.o -c /home/risk/ironlung/src/rainbow.cpp",
+  "file": "/home/risk/ironlung/src/rainbow.cpp"
+},
+{
   "directory": "/home/risk/ironlung/_deps/zlib-build",
   "command": "/usr/bin/cc -DCPR_ENABLE_SSL -DHAVE_BUILTIN_CTZ -DHAVE_BUILTIN_CTZLL -DHAVE_SYS_SDT_H -DHAVE_VISIBILITY_HIDDEN -DHAVE_VISIBILITY_INTERNAL -DUNALIGNED64_OK -DUNALIGNED_OK -DWITH_GZFILEOP -DX86_AVX2 -DX86_AVX2_ADLER32 -DX86_AVX_CHUNKSET -DX86_FEATURES -DX86_PCLMULQDQ_CRC -DX86_SSE2 -DX86_SSE2_CHUNKSET -DX86_SSE2_SLIDEHASH -DX86_SSE42_CMP_STR -DX86_SSE42_CRC_HASH -DX86_SSE42_CRC_INTRIN -DX86_SSSE3 -DX86_SSSE3_ADLER32 -DZLIB_COMPAT -DZLIB_DLL -D_LARGEFILE64_SOURCE=1 -D__USE_LARGEFILE64 -I/home/risk/ironlung/_deps/zlib-build -I/home/risk/ironlung/_deps/zlib-src  -Wall -Wno-implicit-fallthrough -g -DZLIB_DEBUG -fPIC -fno-semantic-interposition -std=c99 -o CMakeFiles/zlib.dir/adler32.c.o -c /home/risk/ironlung/_deps/zlib-src/adler32.c",
   "file": "/home/risk/ironlung/_deps/zlib-src/adler32.c"

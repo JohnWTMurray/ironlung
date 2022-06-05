@@ -346,6 +346,30 @@ src/polygon.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ironlung.dir/build.make CMakeFiles/ironlung.dir/src/polygon.cpp.s
 .PHONY : src/polygon.cpp.s
 
+src/rainbow.o: src/rainbow.cpp.o
+.PHONY : src/rainbow.o
+
+# target to build an object file
+src/rainbow.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ironlung.dir/build.make CMakeFiles/ironlung.dir/src/rainbow.cpp.o
+.PHONY : src/rainbow.cpp.o
+
+src/rainbow.i: src/rainbow.cpp.i
+.PHONY : src/rainbow.i
+
+# target to preprocess a source file
+src/rainbow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ironlung.dir/build.make CMakeFiles/ironlung.dir/src/rainbow.cpp.i
+.PHONY : src/rainbow.cpp.i
+
+src/rainbow.s: src/rainbow.cpp.s
+.PHONY : src/rainbow.s
+
+# target to generate assembly for a file
+src/rainbow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ironlung.dir/build.make CMakeFiles/ironlung.dir/src/rainbow.cpp.s
+.PHONY : src/rainbow.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -378,6 +402,9 @@ help:
 	@echo "... src/polygon.o"
 	@echo "... src/polygon.i"
 	@echo "... src/polygon.s"
+	@echo "... src/rainbow.o"
+	@echo "... src/rainbow.i"
+	@echo "... src/rainbow.s"
 .PHONY : help
 
 

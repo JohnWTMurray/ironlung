@@ -4,6 +4,7 @@
 #include <vector>
 #include "util.hpp"
 
+
 enum EShape {
 	line = 2,
 	triangle = 3, square = 4,
@@ -17,20 +18,21 @@ class Polygon { // based
 	std::vector<Point> points;
 	Colour rgb;
 	int angle;
-	int sh;
+	int shape;
 
 	double asradian(int ang);
+	void calculate_end();
+	void append_point(Point pt);
+	void increment_angle();
+	void update_position();
+	void update_position(int x, int y);
 
 public:
 	Point end;
 	Point core;
 	void click();
-	void calculate_end();
+	void tick(); // game tick
 	void render_self();
-	void append_point(Point pt);
-	void increment_angle();
-	void update_position();
-	void update_position(int x, int y);
 	Polygon(EShape sh, SDL_Renderer* rn); // constructor
 	~Polygon();
 };
