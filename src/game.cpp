@@ -62,7 +62,6 @@ void Game::render() {
 void Game::gameloop() {
 	// SDL_Delay(10000); // sleeps for 10 seconds
 	bool live = true;
-	int inc = 5;
 	SDL_Event event;
 	while (live) {
 		// refactor this as a switch statement please
@@ -74,11 +73,10 @@ void Game::gameloop() {
 			if (event.type == SDL_KEYDOWN) {
 				SDL_Keycode key = event.key.keysym.sym;
 				// key == SDLK_x
-				// if (key == SDLK_UP)  // example
 				if (key == SDLK_ESCAPE)
 					live = false;
 			}
-			pmouse->mouse_event(event.type); 
+			pmouse->mouse_event(event.type);
 			render();
 		}
 	}
@@ -95,7 +93,7 @@ Game::Game() { // constructor
 		HEIGHT, WIDTH, // width & height
 		0 // flags
 	);
-	if (pwindow != nullptr) { // I do not 
+	if (pwindow != nullptr) {
 		prender = SDL_CreateRenderer(pwindow, -1, 0);
 		if (prender != nullptr) {
 			psurface = SDL_CreateRGBSurface(0, WIDTH, HEIGHT, 32, 0, 0, 0, 0);
