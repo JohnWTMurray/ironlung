@@ -12,14 +12,13 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/risk/ironlung/src/gameobject.cpp" "CMakeFiles/ironlung.dir/src/gameobject.cpp.o" "gcc" "CMakeFiles/ironlung.dir/src/gameobject.cpp.o.d"
   "/home/risk/ironlung/src/line.cpp" "CMakeFiles/ironlung.dir/src/line.cpp.o" "gcc" "CMakeFiles/ironlung.dir/src/line.cpp.o.d"
   "/home/risk/ironlung/src/main.cpp" "CMakeFiles/ironlung.dir/src/main.cpp.o" "gcc" "CMakeFiles/ironlung.dir/src/main.cpp.o.d"
+  "/home/risk/ironlung/src/mouse.cpp" "CMakeFiles/ironlung.dir/src/mouse.cpp.o" "gcc" "CMakeFiles/ironlung.dir/src/mouse.cpp.o.d"
   "/home/risk/ironlung/src/polygon.cpp" "CMakeFiles/ironlung.dir/src/polygon.cpp.o" "gcc" "CMakeFiles/ironlung.dir/src/polygon.cpp.o.d"
   "/home/risk/ironlung/src/rainbow.cpp" "CMakeFiles/ironlung.dir/src/rainbow.cpp.o" "gcc" "CMakeFiles/ironlung.dir/src/rainbow.cpp.o.d"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/risk/ironlung/_deps/cpr-build/cpr/CMakeFiles/cpr.dir/DependInfo.cmake"
-  "/home/risk/ironlung/_deps/curl-build/lib/CMakeFiles/libcurl.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

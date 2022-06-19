@@ -1,5 +1,6 @@
-CMakeFiles/ironlung.dir/src/polygon.cpp.o: \
- /home/risk/ironlung/src/polygon.cpp /usr/include/stdc-predef.h \
+CMakeFiles/ironlung.dir/src/mouse.cpp.o: \
+ /home/risk/ironlung/src/mouse.cpp /usr/include/stdc-predef.h \
+ /home/risk/ironlung/include/mouse.hpp \
  /home/risk/ironlung/include/polygon.hpp /usr/include/SDL2/SDL_render.h \
  /usr/include/SDL2/SDL_stdinc.h /usr/include/SDL2/SDL_config.h \
  /usr/include/SDL2/SDL_platform.h /usr/include/SDL2/begin_code.h \
@@ -162,6 +163,4 @@ CMakeFiles/ironlung.dir/src/polygon.cpp.o: \
  /usr/include/c++/11.2.0/bits/stl_vector.h \
  /usr/include/c++/11.2.0/bits/stl_bvector.h \
  /usr/include/c++/11.2.0/bits/vector.tcc \
- /home/risk/ironlung/include/util.hpp /usr/include/SDL2/SDL_mouse.h \
- /usr/include/c++/11.2.0/iterator \
- /usr/include/c++/11.2.0/bits/stream_iterator.h
+ /home/risk/ironlung/include/util.hpp /usr/include/SDL2/SDL_mouse.h

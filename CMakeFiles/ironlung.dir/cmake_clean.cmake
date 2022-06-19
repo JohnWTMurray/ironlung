@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ironlung.dir/src/line.cpp.o.d"
   "CMakeFiles/ironlung.dir/src/main.cpp.o"
   "CMakeFiles/ironlung.dir/src/main.cpp.o.d"
+  "CMakeFiles/ironlung.dir/src/mouse.cpp.o"
+  "CMakeFiles/ironlung.dir/src/mouse.cpp.o.d"
   "CMakeFiles/ironlung.dir/src/polygon.cpp.o"
   "CMakeFiles/ironlung.dir/src/polygon.cpp.o.d"
   "CMakeFiles/ironlung.dir/src/rainbow.cpp.o"

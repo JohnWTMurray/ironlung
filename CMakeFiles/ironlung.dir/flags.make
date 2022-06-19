@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/risk/ironlung/src -I/home/risk/ironlung/include -I/home/risk/ironlung/_deps/cpr-src/include -I/home/risk/ironlung/_deps/cpr-build/cpr_generated_includes -I/home/risk/ironlung/_deps/curl-src/include
+CXX_INCLUDES = -I/home/risk/ironlung/src -I/home/risk/ironlung/include
 
 CXX_FLAGS = -g
 

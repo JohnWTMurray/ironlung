@@ -15,6 +15,7 @@
 #include <SDL2/SDL_opengl.h>
 
 #include "line.hpp"
+#include "mouse.hpp"
 #include "polygon.hpp"
 #include "rainbow.hpp"
 
@@ -24,7 +25,7 @@ struct {
 } typedef Cursor;
 
 
-// this should be configured as a singleton
+// this should be configured as a singleton.
 class Game {
 	static Game* pinstance;
 	SDL_Window* pwindow;
@@ -35,7 +36,8 @@ class Game {
 	Cursor cursor;
 	std::vector<Line> lines;
 	std::vector<Polygon*> polygons;
-	Polygon* po;
+
+	Mouse* pmouse;
 	Rainbow* rain;
 
 	void gameloop();

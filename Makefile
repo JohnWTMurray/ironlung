@@ -85,51 +85,6 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-.PHONY : list_install_components/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
-
 # The main all target
 all: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/risk/ironlung/CMakeFiles /home/risk/ironlung//CMakeFiles/progress.marks
@@ -173,58 +128,6 @@ ironlung: cmake_check_build_system
 ironlung/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ironlung.dir/build.make CMakeFiles/ironlung.dir/build
 .PHONY : ironlung/fast
-
-#=============================================================================
-# Target rules for targets named zlib
-
-# Build rule for target.
-zlib: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 zlib
-.PHONY : zlib
-
-# fast build rule for target.
-zlib/fast:
-	$(MAKE) $(MAKESILENT) -f _deps/zlib-build/CMakeFiles/zlib.dir/build.make _deps/zlib-build/CMakeFiles/zlib.dir/build
-.PHONY : zlib/fast
-
-#=============================================================================
-# Target rules for targets named uninstall
-
-# Build rule for target.
-uninstall: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 uninstall
-.PHONY : uninstall
-
-# fast build rule for target.
-uninstall/fast:
-	$(MAKE) $(MAKESILENT) -f _deps/curl-build/CMakeFiles/uninstall.dir/build.make _deps/curl-build/CMakeFiles/uninstall.dir/build
-.PHONY : uninstall/fast
-
-#=============================================================================
-# Target rules for targets named libcurl
-
-# Build rule for target.
-libcurl: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libcurl
-.PHONY : libcurl
-
-# fast build rule for target.
-libcurl/fast:
-	$(MAKE) $(MAKESILENT) -f _deps/curl-build/lib/CMakeFiles/libcurl.dir/build.make _deps/curl-build/lib/CMakeFiles/libcurl.dir/build
-.PHONY : libcurl/fast
-
-#=============================================================================
-# Target rules for targets named cpr
-
-# Build rule for target.
-cpr: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cpr
-.PHONY : cpr
-
-# fast build rule for target.
-cpr/fast:
-	$(MAKE) $(MAKESILENT) -f _deps/cpr-build/cpr/CMakeFiles/cpr.dir/build.make _deps/cpr-build/cpr/CMakeFiles/cpr.dir/build
-.PHONY : cpr/fast
 
 src/game.o: src/game.cpp.o
 .PHONY : src/game.o
@@ -322,6 +225,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ironlung.dir/build.make CMakeFiles/ironlung.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/mouse.o: src/mouse.cpp.o
+.PHONY : src/mouse.o
+
+# target to build an object file
+src/mouse.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ironlung.dir/build.make CMakeFiles/ironlung.dir/src/mouse.cpp.o
+.PHONY : src/mouse.cpp.o
+
+src/mouse.i: src/mouse.cpp.i
+.PHONY : src/mouse.i
+
+# target to preprocess a source file
+src/mouse.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ironlung.dir/build.make CMakeFiles/ironlung.dir/src/mouse.cpp.i
+.PHONY : src/mouse.cpp.i
+
+src/mouse.s: src/mouse.cpp.s
+.PHONY : src/mouse.s
+
+# target to generate assembly for a file
+src/mouse.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ironlung.dir/build.make CMakeFiles/ironlung.dir/src/mouse.cpp.s
+.PHONY : src/mouse.cpp.s
+
 src/polygon.o: src/polygon.cpp.o
 .PHONY : src/polygon.o
 
@@ -377,16 +304,8 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
-	@echo "... install"
-	@echo "... install/local"
-	@echo "... install/strip"
-	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... uninstall"
-	@echo "... cpr"
 	@echo "... ironlung"
-	@echo "... libcurl"
-	@echo "... zlib"
 	@echo "... src/game.o"
 	@echo "... src/game.i"
 	@echo "... src/game.s"
@@ -399,6 +318,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/mouse.o"
+	@echo "... src/mouse.i"
+	@echo "... src/mouse.s"
 	@echo "... src/polygon.o"
 	@echo "... src/polygon.i"
 	@echo "... src/polygon.s"

@@ -46,12 +46,12 @@ void Game::render() {
 	SDL_RenderClear(prender);
 
 	if (lines.size() > 0) {
-		for (Line ln : lines) {
+		for (Line ln : lines)
 			ln.render_self();
-		}
 	}
-	po->render_self();
+	
 	rain->render_self();
+	pmouse->render();
 
 	SDL_SetRenderDrawColor(this->prender, 0, 255, 0, SDL_ALPHA_OPAQUE); // lime green
 	SDL_RenderFillRect(this->prender, &this->rec);
@@ -67,6 +67,7 @@ void Game::gameloop() {
 	while (live) {
 		// refactor this as a switch statement please
 		if (SDL_PollEvent(&event)) {
+
 			if (event.type == SDL_QUIT) {
 				live = false;
 			}
@@ -77,12 +78,7 @@ void Game::gameloop() {
 				if (key == SDLK_ESCAPE)
 					live = false;
 			}
-			if (event.type == 1024) { // mouse move event
-				SDL_GetMouseState(&cursor.x, &cursor.y); // could cause seg faults
-			}
-			if (event.type == 772) { // mouse click event
-				this->polygons.push_back(new Polygon(triangle, prender));
-			}
+			pmouse->mouse_event(event.type); 
 			render();
 		}
 	}
@@ -105,7 +101,7 @@ Game::Game() { // constructor
 			psurface = SDL_CreateRGBSurface(0, WIDTH, HEIGHT, 32, 0, 0, 0, 0);
 			rec = SDL_Rect{20, 20, 50, 50};
 			cursor = {0, 0};
-			po = new Polygon(triangle, prender);
+			pmouse = Mouse::get_mouse_instance(prender);
 			rain = new Rainbow(prender, 50, Point{HEIGHT / 3, WIDTH / 3}, 100, 200);
 			gameloop();
 		}
