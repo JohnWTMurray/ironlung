@@ -14,23 +14,23 @@
 #include <chrono>
 
 // Entry Point
+void extracted() {
+  	using namespace std;
+  	long y = chrono::system_clock::now().time_since_epoch().count();
+  	auto x = chrono::duration_cast<chrono::milliseconds>(
+    	chrono::system_clock::now().time_since_epoch()
+	);
+}
+
 int main(int argc, char *argv[]) {
-	for (int i = 1; i < argc; i++)
-		printf("%s\n", argv[i]);
+  for (int i = 1; i < argc; i++)
+    printf("%s\n", argv[i]);
+
+	// extracted();
 
 
-	// using namespace std;
-	// auto x = chrono::duration_cast<chrono::milliseconds>(
-	// 	chrono::system_clock::now().time_since_epoch()
-	// );
+  Game *ptr = Game::get_instance();
+  delete (ptr);
 
-	// for (;true;) { // there is eno
-	// 	auto _t = time(NULL);
-	// 	cout << _t << endl;
-	// }
-
-	Game* ptr = Game::get_instance();
-	delete(ptr); 
-
-	return 0;
+  return 0;
 }

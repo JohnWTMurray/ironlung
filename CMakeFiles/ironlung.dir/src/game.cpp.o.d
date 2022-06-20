@@ -285,7 +285,9 @@ CMakeFiles/ironlung.dir/src/game.cpp.o: /home/risk/ironlung/src/game.cpp \
  /home/risk/ironlung/include/line.hpp \
  /home/risk/ironlung/include/util.hpp \
  /home/risk/ironlung/include/mouse.hpp \
- /home/risk/ironlung/include/polygon.hpp \
+ /home/risk/ironlung/include/polygon.hpp /usr/include/c++/11.2.0/chrono \
+ /usr/include/c++/11.2.0/ratio /usr/include/c++/11.2.0/ctime \
+ /usr/include/c++/11.2.0/bits/parse_numbers.h \
  /home/risk/ironlung/include/rainbow.hpp /usr/include/SDL2/SDL_keyboard.h \
  /usr/include/SDL2/SDL_mouse.h /usr/include/SDL2/SDL_pixels.h \
  /usr/include/SDL2/SDL_timer.h /usr/include/c++/11.2.0/future \
@@ -293,9 +295,7 @@ CMakeFiles/ironlung.dir/src/game.cpp.o: /home/risk/ironlung/src/game.cpp \
  /usr/include/c++/11.2.0/utility \
  /usr/include/c++/11.2.0/bits/stl_relops.h /usr/include/c++/11.2.0/array \
  /usr/include/c++/11.2.0/bits/uses_allocator.h \
- /usr/include/c++/11.2.0/bits/invoke.h /usr/include/c++/11.2.0/chrono \
- /usr/include/c++/11.2.0/ratio /usr/include/c++/11.2.0/ctime \
- /usr/include/c++/11.2.0/bits/parse_numbers.h \
+ /usr/include/c++/11.2.0/bits/invoke.h \
  /usr/include/c++/11.2.0/bits/std_mutex.h \
  /usr/include/c++/11.2.0/bits/unique_lock.h \
  /usr/include/c++/11.2.0/condition_variable \
