@@ -8,7 +8,6 @@ Polygon::Polygon(EShape sh, SDL_Renderer* rn) {
 	renderer = rn;
 	angle = 0;
 	rgb = {0, 254, 0};
-	update_position();
 	this->shape = sh;
 
 	double inc = (360.0 / this->shape);
@@ -48,13 +47,7 @@ void Polygon::click() {
 	std::cout << points.size() << std::endl;
 }
 
-void Polygon::update_position() {
-	SDL_GetMouseState(&core.x, &core.y);
-	calculate_end();
-}
-
 void Polygon::update_position(int x, int y) { // overload.
-	// SDL_GetMouseState(&core.x, &core.y);
 	core.x = x; core.y = y;
 	calculate_end();
 }
@@ -77,7 +70,6 @@ double Polygon::asradian(int ang) {
 
 void Polygon::increment_angle() {
 	this->angle += 20;
-	update_position();
 	render_self();
 }
 
@@ -85,7 +77,6 @@ void Polygon::append_point(Point pt) {
 }
 
 void Polygon::render_self() {
-	update_position();
 	SDL_SetRenderDrawColor(renderer, rgb.r, rgb.g, rgb.b, SDL_ALPHA_OPAQUE);
 	for (int i = 1; i < points.size(); i++) {
 		Point start = points[i-1];

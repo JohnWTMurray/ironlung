@@ -12,7 +12,7 @@ enum EShape {
 	heptagon = 7, octogon = 8,
 };
 
-class Polygon { // based
+class Polygon {
 	SDL_Renderer* renderer;
 	int radius;
 	std::vector<Point> points;
@@ -24,12 +24,11 @@ class Polygon { // based
 	void calculate_end();
 	void append_point(Point pt);
 	void increment_angle();
-	void update_position();
-	void update_position(int x, int y);
 
 public:
 	Point end;
 	Point core;
+	void update_position(int x, int y);
 	void click();
 	void tick(); // game tick
 	void render_self();

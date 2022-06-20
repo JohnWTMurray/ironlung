@@ -40,6 +40,7 @@ void Mouse::mouse_event(int event) {
 
 void Mouse::mouse_move() {
 	SDL_GetMouseState(&xpos, &ypos);
+	pshape->update_position(xpos, ypos);
 }
 
 void Mouse::mouse_click() {

@@ -24,7 +24,6 @@ void Rainbow::render_self() {
     int cr = 0;
     int cb = 255;
 
-    printf("x: %d, y: %d\n", refpoint.x, refpoint.y);
     for (int i = refpoint.x; i < (refpoint.x + length); i += inc)
     {
         int height_offset = refpoint.y - height;
