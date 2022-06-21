@@ -46,7 +46,6 @@ void Mouse::mouse_event(int event) {
 	}
 }
 
-// this seems to always evaluate to true?
 bool Mouse::cooldown_calc() {
 	return this->ms_since_epoch() >= (last_click + (long)cooldown_ms);
 }

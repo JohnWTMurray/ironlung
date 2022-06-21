@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/risk/ironlung/src -I/home/risk/ironlung/include
 
-CXX_FLAGS = -g
+CXX_FLAGS = -pthread -g
 

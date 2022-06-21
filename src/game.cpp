@@ -43,10 +43,13 @@ void Game::render() {
 	SDL_SetRenderDrawColor(prender, 0, 0, 0, 255); // black bg
 	SDL_RenderClear(prender);
 
-	if (lines.size() > 0) {
+	if (lines.size() > 0)
 		for (Line &ln : lines)
 			ln.render_self();
-	}
+
+	if (polygons.size() > 0)
+		for (Polygon* p : polygons)
+			p->render_self();
 	
 	rain->render_self();
 	pmouse->render();

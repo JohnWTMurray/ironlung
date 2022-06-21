@@ -1,37 +1,37 @@
 [
 {
   "directory": "/home/risk/ironlung",
-  "command": "/usr/bin/c++  -I/home/risk/ironlung/src -I/home/risk/ironlung/include -g -o CMakeFiles/ironlung.dir/src/main.cpp.o -c /home/risk/ironlung/src/main.cpp",
+  "command": "/usr/bin/c++  -I/home/risk/ironlung/src -I/home/risk/ironlung/include -pthread -g -o CMakeFiles/ironlung.dir/src/main.cpp.o -c /home/risk/ironlung/src/main.cpp",
   "file": "/home/risk/ironlung/src/main.cpp"
 },
 {
   "directory": "/home/risk/ironlung",
-  "command": "/usr/bin/c++  -I/home/risk/ironlung/src -I/home/risk/ironlung/include -g -o CMakeFiles/ironlung.dir/src/game.cpp.o -c /home/risk/ironlung/src/game.cpp",
+  "command": "/usr/bin/c++  -I/home/risk/ironlung/src -I/home/risk/ironlung/include -pthread -g -o CMakeFiles/ironlung.dir/src/game.cpp.o -c /home/risk/ironlung/src/game.cpp",
   "file": "/home/risk/ironlung/src/game.cpp"
 },
 {
   "directory": "/home/risk/ironlung",
-  "command": "/usr/bin/c++  -I/home/risk/ironlung/src -I/home/risk/ironlung/include -g -o CMakeFiles/ironlung.dir/src/line.cpp.o -c /home/risk/ironlung/src/line.cpp",
+  "command": "/usr/bin/c++  -I/home/risk/ironlung/src -I/home/risk/ironlung/include -pthread -g -o CMakeFiles/ironlung.dir/src/line.cpp.o -c /home/risk/ironlung/src/line.cpp",
   "file": "/home/risk/ironlung/src/line.cpp"
 },
 {
   "directory": "/home/risk/ironlung",
-  "command": "/usr/bin/c++  -I/home/risk/ironlung/src -I/home/risk/ironlung/include -g -o CMakeFiles/ironlung.dir/src/gameobject.cpp.o -c /home/risk/ironlung/src/gameobject.cpp",
+  "command": "/usr/bin/c++  -I/home/risk/ironlung/src -I/home/risk/ironlung/include -pthread -g -o CMakeFiles/ironlung.dir/src/gameobject.cpp.o -c /home/risk/ironlung/src/gameobject.cpp",
   "file": "/home/risk/ironlung/src/gameobject.cpp"
 },
 {
   "directory": "/home/risk/ironlung",
-  "command": "/usr/bin/c++  -I/home/risk/ironlung/src -I/home/risk/ironlung/include -g -o CMakeFiles/ironlung.dir/src/polygon.cpp.o -c /home/risk/ironlung/src/polygon.cpp",
+  "command": "/usr/bin/c++  -I/home/risk/ironlung/src -I/home/risk/ironlung/include -pthread -g -o CMakeFiles/ironlung.dir/src/polygon.cpp.o -c /home/risk/ironlung/src/polygon.cpp",
   "file": "/home/risk/ironlung/src/polygon.cpp"
 },
 {
   "directory": "/home/risk/ironlung",
-  "command": "/usr/bin/c++  -I/home/risk/ironlung/src -I/home/risk/ironlung/include -g -o CMakeFiles/ironlung.dir/src/rainbow.cpp.o -c /home/risk/ironlung/src/rainbow.cpp",
+  "command": "/usr/bin/c++  -I/home/risk/ironlung/src -I/home/risk/ironlung/include -pthread -g -o CMakeFiles/ironlung.dir/src/rainbow.cpp.o -c /home/risk/ironlung/src/rainbow.cpp",
   "file": "/home/risk/ironlung/src/rainbow.cpp"
 },
 {
   "directory": "/home/risk/ironlung",
-  "command": "/usr/bin/c++  -I/home/risk/ironlung/src -I/home/risk/ironlung/include -g -o CMakeFiles/ironlung.dir/src/mouse.cpp.o -c /home/risk/ironlung/src/mouse.cpp",
+  "command": "/usr/bin/c++  -I/home/risk/ironlung/src -I/home/risk/ironlung/include -pthread -g -o CMakeFiles/ironlung.dir/src/mouse.cpp.o -c /home/risk/ironlung/src/mouse.cpp",
   "file": "/home/risk/ironlung/src/mouse.cpp"
 }
 ]
