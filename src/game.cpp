@@ -44,7 +44,7 @@ void Game::render() {
 	SDL_RenderClear(prender);
 
 	if (lines.size() > 0) {
-		for (Line ln : lines)
+		for (Line &ln : lines)
 			ln.render_self();
 	}
 	

@@ -16,14 +16,14 @@
 
 // Entry Point
 void extracted() {
-	using namespace std;
+	using namespace std; 
 	long y = chrono::system_clock::now().time_since_epoch().count();
 	auto x = chrono::duration_cast<chrono::milliseconds>(
 		chrono::system_clock::now().time_since_epoch()
 	);
 }
 
-int main(int argc, char * argv[]) {
+int main(int argc, char *argv[]) {
   	for (int i = 1; i < argc; i++)
 		printf("%s\n", argv[i]);
 
