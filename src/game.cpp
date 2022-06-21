@@ -97,9 +97,10 @@ Game::Game() { // constructor
 		prender = SDL_CreateRenderer(pwindow, -1, 0);
 		if (prender != nullptr) {
 			psurface = SDL_CreateRGBSurface(0, WIDTH, HEIGHT, 32, 0, 0, 0, 0);
-			rec = SDL_Rect{20, 20, 50, 50};
+			rec = SDL_Rect{20, 20, 200, 10};
 			cursor = {0, 0};
-			rain = new Rainbow(prender, 5, Point{HEIGHT / 3, WIDTH / 3}, 100, 200);
+			// rain = new Rainbow(prender, 5, Point{ HEIGHT / 3, WIDTH / 3 }, 100, 200);
+			rain = new Rainbow(prender, 5, Point{ 20, 40 }, 100, 200);
 			pmouse = Mouse::get_mouse_instance(prender, this->rain);
 			gameloop();
 		}

@@ -53,9 +53,12 @@ bool Mouse::cooldown_calc() {
 
 void Mouse::mouse_move() {
 	SDL_GetMouseState(&xpos, &ypos);
+	rainptr->move_anchor(xpos, ypos);
 	pshape->update_position(xpos, ypos);
 }
 
+// total number of milliseconds that have elapsed since the unix epoch
+// at the very instance in which the method is called.
 long Mouse::ms_since_epoch() {
 	return std::chrono::duration_cast<std::chrono::milliseconds>(
 		std::chrono::system_clock::now().time_since_epoch()

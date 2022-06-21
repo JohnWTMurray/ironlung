@@ -19,6 +19,14 @@ void Rainbow::calculations() {
     // does nothing for now.
 }
 
+void Rainbow::move_anchor(Point pnt) {
+	refpoint = pnt;
+}
+
+void Rainbow::move_anchor(int x, int y) {
+	refpoint.x = x; refpoint.y = y;
+}
+
 void Rainbow::render_self() {
     int inc = (int)floor(length / definition);
     int cr = 0;
@@ -26,9 +34,9 @@ void Rainbow::render_self() {
 
     for (int i = refpoint.x; i < (refpoint.x + length); i += inc)
     {
-        int height_offset = refpoint.y - height;
+        int height_offset = height - refpoint.y;
         SDL_Rect rec = { // x, y, w, h
-            i, height_offset,
+            i, refpoint.y,
             inc, height_offset
         };
         SDL_SetRenderDrawColor(renptr, cb, 0, cr, SDL_ALPHA_OPAQUE);
