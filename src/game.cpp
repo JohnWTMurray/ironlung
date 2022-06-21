@@ -32,14 +32,12 @@ Game::~Game() { // deconstructor
 
 // STATIC
 Game* Game::get_instance() { // static method
-	if (!pinstance) {
+	if (!Game::pinstance)
 		Game::pinstance = new Game();
-	}
 	return Game::pinstance;
 }
 
 // PRIVATE
-
 void Game::render() {
 	// SDL_SetRenderDrawColor(prender, 255, 255, 255, 255);  // white bg
 	SDL_SetRenderDrawColor(prender, 0, 0, 0, 255); // black bg
@@ -86,6 +84,7 @@ void Game::gameloop() {
 }
 
 Game::Game() { // constructor
+
 	SDL_Init(SDL_INIT_VIDEO);
 	HEIGHT = 500; WIDTH = 500;
 	pwindow = SDL_CreateWindow("Polygons", // title
@@ -93,14 +92,15 @@ Game::Game() { // constructor
 		HEIGHT, WIDTH, // width & height
 		0 // flags
 	);
+
 	if (pwindow != nullptr) {
 		prender = SDL_CreateRenderer(pwindow, -1, 0);
 		if (prender != nullptr) {
 			psurface = SDL_CreateRGBSurface(0, WIDTH, HEIGHT, 32, 0, 0, 0, 0);
 			rec = SDL_Rect{20, 20, 50, 50};
 			cursor = {0, 0};
-			pmouse = Mouse::get_mouse_instance(prender);
-			rain = new Rainbow(prender, 50, Point{HEIGHT / 3, WIDTH / 3}, 100, 200);
+			rain = new Rainbow(prender, 5, Point{HEIGHT / 3, WIDTH / 3}, 100, 200);
+			pmouse = Mouse::get_mouse_instance(prender, this->rain);
 			gameloop();
 		}
 		else {
@@ -108,6 +108,6 @@ Game::Game() { // constructor
 		}
 	}
 	else {
-		printf("Could not init window for some reason\n");
+		printf("could not init window for some reason\n");
 	}
 }

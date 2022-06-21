@@ -1,5 +1,6 @@
 #pragma once
 #include "polygon.hpp"
+#include "rainbow.hpp"
 #include <chrono>
 #include <SDL2/SDL_render.h>
 
@@ -8,7 +9,7 @@
 class Mouse {
 	static Mouse* pinstance;
 	static int static_count;
-	Mouse(SDL_Renderer* ren); // constructor is private 
+	Mouse(SDL_Renderer* ren, Rainbow* rain); // constructor is private 
 	Polygon* pshape;
 	SDL_Renderer* renptr;
 	void mouse_move();
@@ -17,8 +18,10 @@ class Mouse {
 
 	int cooldown_ms; 
 	long last_click;
+	Rainbow* rainptr;
 
 	bool cooldown_calc();
+	long ms_since_epoch();
 
 
 public:
@@ -26,6 +29,6 @@ public:
 	void mouse_event(int event);
 
 	void render();
-	static Mouse* get_mouse_instance(SDL_Renderer* ren);
+	static Mouse* get_mouse_instance(SDL_Renderer* ren, Rainbow* rainptr);
 	static Mouse* get_mouse_instance();
 };

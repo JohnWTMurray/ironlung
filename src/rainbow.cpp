@@ -31,10 +31,10 @@ void Rainbow::render_self() {
             i, height_offset,
             inc, height_offset
         };
-        SDL_SetRenderDrawColor(renptr, 0, cb, 0, SDL_ALPHA_OPAQUE); // hello world 
+        SDL_SetRenderDrawColor(renptr, cb, 0, cr, SDL_ALPHA_OPAQUE);
         SDL_RenderFillRect(renptr, &rec);
 
-        // cr += (int)floor(255 / this->definition);
+        cr += (int)floor(255 / this->definition);
         cb -= (int)floor(255 / definition);
     }
 }

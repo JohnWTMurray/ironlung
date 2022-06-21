@@ -163,7 +163,8 @@ CMakeFiles/ironlung.dir/src/mouse.cpp.o: \
  /usr/include/c++/11.2.0/bits/stl_vector.h \
  /usr/include/c++/11.2.0/bits/stl_bvector.h \
  /usr/include/c++/11.2.0/bits/vector.tcc \
- /home/risk/ironlung/include/util.hpp /usr/include/c++/11.2.0/chrono \
+ /home/risk/ironlung/include/util.hpp \
+ /home/risk/ironlung/include/rainbow.hpp /usr/include/c++/11.2.0/chrono \
  /usr/include/c++/11.2.0/ratio /usr/include/c++/11.2.0/ctime \
  /usr/include/c++/11.2.0/bits/parse_numbers.h \
  /usr/include/SDL2/SDL_mouse.h

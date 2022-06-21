@@ -388,11 +388,11 @@ CMakeFiles/ironlung.dir/src/game.cpp.o: src/game.cpp \
   include/util.hpp \
   include/mouse.hpp \
   include/polygon.hpp \
+  include/rainbow.hpp \
   /usr/include/c++/11.2.0/chrono \
   /usr/include/c++/11.2.0/ratio \
   /usr/include/c++/11.2.0/ctime \
   /usr/include/c++/11.2.0/bits/parse_numbers.h \
-  include/rainbow.hpp \
   /usr/include/SDL2/SDL_keyboard.h \
   /usr/include/SDL2/SDL_mouse.h \
   /usr/include/SDL2/SDL_pixels.h \
@@ -1501,6 +1501,7 @@ CMakeFiles/ironlung.dir/src/mouse.cpp.o: src/mouse.cpp \
   /usr/include/c++/11.2.0/bits/stl_bvector.h \
   /usr/include/c++/11.2.0/bits/vector.tcc \
   include/util.hpp \
+  include/rainbow.hpp \
   /usr/include/c++/11.2.0/chrono \
   /usr/include/c++/11.2.0/ratio \
   /usr/include/c++/11.2.0/ctime \
@@ -2996,9 +2997,9 @@ include/mouse.hpp:
 
 include/polygon.hpp:
 
-/usr/include/c++/11.2.0/bits/parse_numbers.h:
-
 include/rainbow.hpp:
+
+/usr/include/c++/11.2.0/bits/parse_numbers.h:
 
 /usr/include/c++/11.2.0/future:
 
