@@ -56,6 +56,8 @@ void Game::render() {
 
 	SDL_SetRenderDrawColor(this->prender, 0, 255, 0, SDL_ALPHA_OPAQUE); // lime green
 	SDL_RenderFillRect(this->prender, &this->rec);
+	SDL_SetRenderDrawColor(this->prender, 255, 0, 0, SDL_ALPHA_OPAQUE); // lime green
+	SDL_RenderFillRect(this->prender, &this->recY);
 
 	SDL_RenderPresent(prender);
 }
@@ -100,7 +102,8 @@ Game::Game() { // constructor
 		prender = SDL_CreateRenderer(pwindow, -1, 0);
 		if (prender != nullptr) {
 			psurface = SDL_CreateRGBSurface(0, WIDTH, HEIGHT, 32, 0, 0, 0, 0);
-			rec = SDL_Rect{20, 20, 200, 10};
+			rec = SDL_Rect{20, 20, 200, 1};
+			recY = SDL_Rect{20, 20, 1, 200};
 			cursor = {0, 0};
 			// rain = new Rainbow(prender, 5, Point{ HEIGHT / 3, WIDTH / 3 }, 100, 200);
 			rain = new Rainbow(prender, 5, Point{ 20, 40 }, 100, 200);

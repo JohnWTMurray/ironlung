@@ -32,6 +32,7 @@ class Game {
 	SDL_Renderer* prender;
 	SDL_Surface* psurface;
 	SDL_Rect rec;
+	SDL_Rect recY;
 
 	Cursor cursor;
 	std::vector<Line> lines;

@@ -23,11 +23,12 @@ class Polygon {
 	double asradian(int ang);
 	void calculate_end();
 	void append_point(Point pt);
-	void increment_angle();
 
 public:
 	Point end;
 	Point core;
+	void set_angle();
+	void increment_angle(int ang);
 	void update_position(int x, int y);
 	void click();
 	void tick(); // game tick

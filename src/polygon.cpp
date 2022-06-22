@@ -68,8 +68,8 @@ double Polygon::asradian(int ang) {
 	return ang * (M_PI / 180);
 }
 
-void Polygon::increment_angle() {
-	this->angle += 20;
+void Polygon::increment_angle(int ang) {
+	this->angle += ang;
 	render_self();
 }
 

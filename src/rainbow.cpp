@@ -39,7 +39,7 @@ void Rainbow::render_self() {
             i, refpoint.y,
             inc, height_offset
         };
-        SDL_SetRenderDrawColor(renptr, cb, 255, cr, SDL_ALPHA_OPAQUE);
+        SDL_SetRenderDrawColor(renptr, cb, 0, cr, SDL_ALPHA_OPAQUE);
         SDL_RenderFillRect(renptr, &rec);
 
         cr += (int)floor(255 / this->definition);
