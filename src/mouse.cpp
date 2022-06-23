@@ -80,3 +80,8 @@ void Mouse::mouse_click() {
 void Mouse::render() {
 	pshape->render_self();
 }
+
+Mouse::~Mouse() {
+	delete this->pshape;
+	// delete Mouse::pinstance; // I think this could be an infinite loop...
+}

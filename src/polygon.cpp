@@ -76,6 +76,7 @@ void Polygon::increment_angle(int ang) {
 void Polygon::append_point(Point pt) {
 }
 
+// polygons should no longer render themselves, they should be rendered by the camera.
 void Polygon::render_self() {
 	SDL_SetRenderDrawColor(renderer, rgb.r, rgb.g, rgb.b, SDL_ALPHA_OPAQUE);
 	for (int i = 1; i < points.size(); i++) {

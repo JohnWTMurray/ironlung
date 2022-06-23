@@ -9,9 +9,12 @@ Sync* Sync::get_instance() {
 	return Sync::pinstance;
 }
 
-long Sync::get_time_now() {
-	using namespace std;
-	return chrono::duration_cast<chrono::milliseconds>(
-		chrono::system_clock::now().time_since_epoch()
+long Sync::get_time_now() { 
+	return std::chrono::duration_cast<std::chrono::milliseconds>(
+		std::chrono::system_clock::now().time_since_epoch()
 	).count();
+}
+
+Sync::Sync() {
+	this->tick_rate = 200; // one tick every 200 milliseconds.
 }

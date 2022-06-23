@@ -18,6 +18,7 @@
 #include "mouse.hpp"
 #include "polygon.hpp"
 #include "rainbow.hpp"
+#include "sync.hpp"
 
 struct {
 	int x;
@@ -32,7 +33,7 @@ class Game {
 	SDL_Renderer* prender;
 	SDL_Surface* psurface;
 	SDL_Rect rec;
-	SDL_Rect recY;
+	Sync* sync;
 
 	Cursor cursor;
 	std::vector<Line> lines;
