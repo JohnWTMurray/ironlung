@@ -47,13 +47,12 @@ void Mouse::mouse_event(int event) {
 }
 
 bool Mouse::cooldown_calc() {
-	Mouse::static_count;
 	return this->ms_since_epoch() >= (last_click + (long)cooldown_ms);
 }
 
 void Mouse::mouse_move() {
 	SDL_GetMouseState(&xpos, &ypos);
-	rainptr->move_anchor(xpos, ypos);
+	// rainptr->move_anchor(xpos, ypos);
 	pshape->update_position(xpos, ypos);
 }
 
@@ -67,13 +66,10 @@ long Mouse::ms_since_epoch() {
 
 void Mouse::mouse_click() {
 	if (this->cooldown_calc()) {
-		rainptr->set_definition(Mouse::static_count);
+		// rainptr->set_definition(Mouse::static_count);
 		Mouse::static_count += 1;
 		last_click = this->ms_since_epoch();
 		pshape->increment_angle(30);
-	}
-	else {
-		// cooldown
 	}
 }
 

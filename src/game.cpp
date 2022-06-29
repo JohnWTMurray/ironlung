@@ -45,7 +45,7 @@ Game::~Game() { // deconstructor
 Game* Game::get_instance() { // static method
 	if (!Game::pinstance)
 		Game::pinstance = new Game();
-	return Game::pinstance;
+	return Game::pinstance; 
 }
 
 // PRIVATE

@@ -7,10 +7,11 @@
 #include <bits/stdc++.h>
 #include <stdio.h>
 #include <chrono>
+#include <functional>
 
 /* Multithreading test */
-// #include <thread>
-// #include <mutex>
+#include <thread>
+#include <mutex>
 
 // custom
 #include "game.hpp"
@@ -30,25 +31,35 @@ void extracted() {
 // multithreading test 
 void print_stuff(int n, char c) {
 	for (int i = 0; i < n; i += 1)
-		printf("%c", c);
-	printf("\n");
+		std::cout << c;
+}
+
+int function_delta(int x, char c) {
+	printf("fornite: %d %c\n", x, c);
+	return (int)(x / 2);
+}
+
+// getting the concept of using function pointers as callbacks.
+void function_alpha(int (*handler)(int x, char c)) {
+	std::cout << "Calling function\n";
+	printf("res: %d\n", handler(100, 's'));
 }
 
 // Entry Point
 int main(int argc, char *argv[]) {
 
   	for (int i = 1; i < argc; i++)
-		printf("%s\n", argv[i]);
+		printf("%s\n", argv[i]); 
 
+	// std::thread a(print_stuff, 50, '$');
+	// std::thread b(print_stuff, 50, '%');
+	// b.join(); a.join();
 
-	// std::thread a(print_stuff, 8, "$");
-	// std::thread b(print_stuff, 8, "%");
-
-	// a.join(); b.join();
-
+	// function_alpha(&function_delta);
 
   	Game *ptr = Game::get_instance();
   	delete (ptr);
+
 
   	return 0;
 }

@@ -297,6 +297,30 @@ src/rainbow.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ironlung.dir/build.make CMakeFiles/ironlung.dir/src/rainbow.cpp.s
 .PHONY : src/rainbow.cpp.s
 
+src/sync.o: src/sync.cpp.o
+.PHONY : src/sync.o
+
+# target to build an object file
+src/sync.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ironlung.dir/build.make CMakeFiles/ironlung.dir/src/sync.cpp.o
+.PHONY : src/sync.cpp.o
+
+src/sync.i: src/sync.cpp.i
+.PHONY : src/sync.i
+
+# target to preprocess a source file
+src/sync.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ironlung.dir/build.make CMakeFiles/ironlung.dir/src/sync.cpp.i
+.PHONY : src/sync.cpp.i
+
+src/sync.s: src/sync.cpp.s
+.PHONY : src/sync.s
+
+# target to generate assembly for a file
+src/sync.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ironlung.dir/build.make CMakeFiles/ironlung.dir/src/sync.cpp.s
+.PHONY : src/sync.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -327,6 +351,9 @@ help:
 	@echo "... src/rainbow.o"
 	@echo "... src/rainbow.i"
 	@echo "... src/rainbow.s"
+	@echo "... src/sync.o"
+	@echo "... src/sync.i"
+	@echo "... src/sync.s"
 .PHONY : help
 
 

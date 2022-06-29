@@ -15,6 +15,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/risk/ironlung/src/mouse.cpp" "CMakeFiles/ironlung.dir/src/mouse.cpp.o" "gcc" "CMakeFiles/ironlung.dir/src/mouse.cpp.o.d"
   "/home/risk/ironlung/src/polygon.cpp" "CMakeFiles/ironlung.dir/src/polygon.cpp.o" "gcc" "CMakeFiles/ironlung.dir/src/polygon.cpp.o.d"
   "/home/risk/ironlung/src/rainbow.cpp" "CMakeFiles/ironlung.dir/src/rainbow.cpp.o" "gcc" "CMakeFiles/ironlung.dir/src/rainbow.cpp.o.d"
+  "/home/risk/ironlung/src/sync.cpp" "CMakeFiles/ironlung.dir/src/sync.cpp.o" "gcc" "CMakeFiles/ironlung.dir/src/sync.cpp.o.d"
   )
 
 # Targets to which this target links.

@@ -8,12 +8,9 @@ project(ironlung VERSION 0.1.0)
 
 include_directories(src)
 
-SET(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} "-pthread")
-find_package(Threads REQUIRED)
 
-
-add_executable(ironlung src/main.cpp src/game.cpp src/line.cpp src/gameobject.cpp src/polygon.cpp src/rainbow.cpp src/mouse.cpp)
+add_executable(ironlung src/main.cpp src/game.cpp src/line.cpp src/gameobject.cpp src/polygon.cpp src/rainbow.cpp src/mouse.cpp src/sync.cpp)
 target_include_directories(ironlung PRIVATE include/)
 
 
-target_link_libraries(ironlung PUBLIC SDL2main SDL2 GL)
+target_link_libraries(ironlung PUBLIC SDL2main SDL2 GL pthread) 

@@ -18,3 +18,7 @@ long Sync::get_time_now() {
 Sync::Sync() {
 	this->tick_rate = 200; // one tick every 200 milliseconds.
 }
+
+Sync::~Sync() {
+	// it exits
+}
