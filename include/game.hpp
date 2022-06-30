@@ -1,3 +1,4 @@
+#pragma once
 // Util
 #include <iostream>
 #include <openssl/pkcs7.h>
@@ -19,7 +20,10 @@
 #include "polygon.hpp"
 #include "rainbow.hpp"
 #include "sync.hpp"
+#include "game.hpp"
+#include "camera.hpp"
 
+/* Depreciated */
 struct {
 	int x;
 	int y;
@@ -35,7 +39,7 @@ class Game {
 	SDL_Rect rec;
 	Sync* sync;
 
-	Cursor cursor;
+	std::vector<Camera> cameras;
 	std::vector<Line> lines;
 	std::vector<Polygon*> polygons;
 

@@ -401,6 +401,7 @@ CMakeFiles/ironlung.dir/src/game.cpp.o: src/game.cpp \
   /usr/include/c++/12.1.0/ctime \
   /usr/include/c++/12.1.0/bits/parse_numbers.h \
   include/sync.hpp \
+  include/camera.hpp \
   /usr/include/SDL2/SDL_keyboard.h \
   /usr/include/SDL2/SDL_mouse.h \
   /usr/include/SDL2/SDL_pixels.h \
@@ -692,7 +693,7 @@ CMakeFiles/ironlung.dir/src/line.cpp.o: src/line.cpp \
 
 CMakeFiles/ironlung.dir/src/main.cpp.o: src/main.cpp \
   /usr/include/stdc-predef.h \
-  /usr/include/c++/12.1.0/ctime \
+  /usr/include/c++/12.1.0/cstring \
   /usr/include/c++/12.1.0/x86_64-pc-linux-gnu/bits/c++config.h \
   /usr/include/c++/12.1.0/x86_64-pc-linux-gnu/bits/os_defines.h \
   /usr/include/features.h \
@@ -705,8 +706,14 @@ CMakeFiles/ironlung.dir/src/main.cpp.o: src/main.cpp \
   /usr/include/gnu/stubs-64.h \
   /usr/include/c++/12.1.0/x86_64-pc-linux-gnu/bits/cpu_defines.h \
   /usr/include/c++/12.1.0/pstl/pstl_config.h \
-  /usr/include/time.h \
+  /usr/include/string.h \
+  /usr/include/bits/libc-header-start.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/include/stddef.h \
+  /usr/include/bits/types/locale_t.h \
+  /usr/include/bits/types/__locale_t.h \
+  /usr/include/strings.h \
+  /usr/include/c++/12.1.0/ctime \
+  /usr/include/time.h \
   /usr/include/bits/time.h \
   /usr/include/bits/types.h \
   /usr/include/bits/typesizes.h \
@@ -722,8 +729,6 @@ CMakeFiles/ironlung.dir/src/main.cpp.o: src/main.cpp \
   /usr/include/bits/types/clockid_t.h \
   /usr/include/bits/types/timer_t.h \
   /usr/include/bits/types/struct_itimerspec.h \
-  /usr/include/bits/types/locale_t.h \
-  /usr/include/bits/types/__locale_t.h \
   /usr/include/c++/12.1.0/iostream \
   /usr/include/c++/12.1.0/ostream \
   /usr/include/c++/12.1.0/ios \
@@ -733,7 +738,6 @@ CMakeFiles/ironlung.dir/src/main.cpp.o: src/main.cpp \
   /usr/include/c++/12.1.0/bits/postypes.h \
   /usr/include/c++/12.1.0/cwchar \
   /usr/include/wchar.h \
-  /usr/include/bits/libc-header-start.h \
   /usr/include/bits/floatn.h \
   /usr/include/bits/floatn-common.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/include/stdarg.h \
@@ -955,9 +959,6 @@ CMakeFiles/ironlung.dir/src/main.cpp.o: src/main.cpp \
   /usr/include/bits/signal_ext.h \
   /usr/include/c++/12.1.0/cstdarg \
   /usr/include/c++/12.1.0/cstddef \
-  /usr/include/c++/12.1.0/cstring \
-  /usr/include/string.h \
-  /usr/include/strings.h \
   /usr/include/c++/12.1.0/ccomplex \
   /usr/include/c++/12.1.0/complex \
   /usr/include/c++/12.1.0/sstream \
@@ -1279,7 +1280,8 @@ CMakeFiles/ironlung.dir/src/main.cpp.o: src/main.cpp \
   include/mouse.hpp \
   include/polygon.hpp \
   include/rainbow.hpp \
-  include/sync.hpp
+  include/sync.hpp \
+  include/camera.hpp
 
 CMakeFiles/ironlung.dir/src/mouse.cpp.o: src/mouse.cpp \
   /usr/include/stdc-predef.h \
@@ -2136,6 +2138,8 @@ src/polygon.cpp:
 
 /usr/include/c++/12.1.0/bit:
 
+/usr/include/c++/12.1.0/bits/stl_raw_storage_iter.h:
+
 /usr/include/SDL2/SDL_render.h:
 
 /usr/include/SDL2/SDL_endian.h:
@@ -2247,8 +2251,6 @@ src/rainbow.cpp:
 /usr/include/c++/12.1.0/bits/locale_classes.tcc:
 
 /usr/include/bits/types/error_t.h:
-
-/usr/include/c++/12.1.0/bits/stl_raw_storage_iter.h:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/include/enqcmdintrin.h:
 
@@ -3063,6 +3065,8 @@ include/polygon.hpp:
 include/sync.hpp:
 
 /usr/include/openssl/ecerr.h:
+
+include/camera.hpp:
 
 /usr/include/c++/12.1.0/future:
 

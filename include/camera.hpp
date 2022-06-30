@@ -9,12 +9,14 @@ class Camera {
 	std::vector<Polygon*> visible_polygons;
 	Point anchorpoint;
 	int magnification; // we're not worrying about this just yet.
+	int HEIGHT;
+	int WIDTH;
 
 
 	// Identifies which polygons are within view of the camera.
 	void filter_polygons(); 
 	
 public:
-	Camera(Point start, std::vector<Polygon*>* pgns);
+	Camera(Point start, std::vector<Polygon*>* pgns, int hpara, int wpara);
 	~Camera();
 };

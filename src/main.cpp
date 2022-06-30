@@ -1,5 +1,6 @@
 
 // Standard Util
+#include <cstring>
 #include <ctime>
 #include <iostream>
 #include <vector>
@@ -31,7 +32,7 @@ void extracted() {
 // multithreading test 
 void print_stuff(int n, char c) {
 	for (int i = 0; i < n; i += 1)
-		std::cout << c;
+	 	printf("%c", c);
 }
 
 int function_delta(int x, char c) {
@@ -41,15 +42,21 @@ int function_delta(int x, char c) {
 
 // getting the concept of using function pointers as callbacks.
 void function_alpha(int (*handler)(int x, char c)) {
-	std::cout << "Calling function\n";
+	printf("Calling function\n");
 	printf("res: %d\n", handler(100, 's'));
 }
 
 // Entry Point
+void example_memset() {
+	char str[] = "Almost all programmers should not what memset is";
+	memset(str, 45, 6);
+	printf("%s\n", str);
+}
+
 int main(int argc, char *argv[]) {
 
-  	for (int i = 1; i < argc; i++)
-		printf("%s\n", argv[i]); 
+  for (int i = 1; i < argc; i++)
+    printf("%s\n", argv[i]);
 
 	// std::thread a(print_stuff, 50, '$');
 	// std::thread b(print_stuff, 50, '%');
@@ -57,9 +64,8 @@ int main(int argc, char *argv[]) {
 
 	// function_alpha(&function_delta);
 
-  	Game *ptr = Game::get_instance();
-  	delete (ptr);
+	Game *ptr = Game::get_instance();
+	delete (ptr);
 
-
-  	return 0;
+	return 0;
 }

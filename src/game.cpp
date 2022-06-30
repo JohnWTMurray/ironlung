@@ -1,4 +1,5 @@
 #include "game.hpp"
+#include "camera.hpp"
 #include "line.hpp"
 #include "polygon.hpp"
 #include "rainbow.hpp"
@@ -114,9 +115,9 @@ Game::Game() { // constructor
 			rec = SDL_Rect{20, 20, 200, 1};
 
 			sync = Sync::get_instance();
-			// rain = new Rainbow(prender, 5, Point{ HEIGHT / 3, WIDTH / 3 }, 100, 200);
-			rain = new Rainbow(prender, 5, Point{ 20, 40 }, 100, 200);
-			pmouse = Mouse::get_mouse_instance(prender, this->rain);
+			// rain = new Rainbow(prender, 5, Point{ 20, 40 }, 100, 200);
+			pmouse = Mouse::get_mouse_instance(prender);
+			cameras.push_back(Camera({0, 0}, &polygons, HEIGHT, WIDTH));
 			gameloop();
 		}
 		else {

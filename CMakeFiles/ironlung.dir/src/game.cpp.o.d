@@ -296,7 +296,8 @@ CMakeFiles/ironlung.dir/src/game.cpp.o: /home/risk/ironlung/src/game.cpp \
  /usr/include/c++/12.1.0/bits/chrono.h /usr/include/c++/12.1.0/ratio \
  /usr/include/c++/12.1.0/ctime \
  /usr/include/c++/12.1.0/bits/parse_numbers.h \
- /home/risk/ironlung/include/sync.hpp /usr/include/SDL2/SDL_keyboard.h \
+ /home/risk/ironlung/include/sync.hpp \
+ /home/risk/ironlung/include/camera.hpp /usr/include/SDL2/SDL_keyboard.h \
  /usr/include/SDL2/SDL_mouse.h /usr/include/SDL2/SDL_pixels.h \
  /usr/include/SDL2/SDL_timer.h /usr/include/c++/12.1.0/future \
  /usr/include/c++/12.1.0/mutex /usr/include/c++/12.1.0/tuple \

@@ -13,9 +13,9 @@ int Mouse::static_count;
 
 
 // STATIC
-Mouse* Mouse::get_mouse_instance(SDL_Renderer* ren, Rainbow* rainptr) {
+Mouse* Mouse::get_mouse_instance(SDL_Renderer* ren) {
 	if (Mouse::pinstance == nullptr) 
-		pinstance = new Mouse(ren, rainptr);
+		pinstance = new Mouse(ren);
 	return Mouse::pinstance;
 }
 
@@ -24,8 +24,7 @@ Mouse* Mouse::get_mouse_instance() {
 	return (Mouse::pinstance) ? Mouse::pinstance : nullptr;
 }
 
-Mouse::Mouse(SDL_Renderer* ren, Rainbow* rainptr) { // constructor
-	this->rainptr = rainptr;
+Mouse::Mouse(SDL_Renderer* ren) { // constructor
 	Mouse::static_count = 1;
 	last_click = 0;
 	cooldown_ms = 1000; // 1 second
@@ -52,7 +51,6 @@ bool Mouse::cooldown_calc() {
 
 void Mouse::mouse_move() {
 	SDL_GetMouseState(&xpos, &ypos);
-	// rainptr->move_anchor(xpos, ypos);
 	pshape->update_position(xpos, ypos);
 }
 
@@ -66,7 +64,6 @@ long Mouse::ms_since_epoch() {
 
 void Mouse::mouse_click() {
 	if (this->cooldown_calc()) {
-		// rainptr->set_definition(Mouse::static_count);
 		Mouse::static_count += 1;
 		last_click = this->ms_since_epoch();
 		pshape->increment_angle(30);

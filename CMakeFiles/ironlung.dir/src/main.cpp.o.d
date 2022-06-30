@@ -1,5 +1,5 @@
 CMakeFiles/ironlung.dir/src/main.cpp.o: /home/risk/ironlung/src/main.cpp \
- /usr/include/stdc-predef.h /usr/include/c++/12.1.0/ctime \
+ /usr/include/stdc-predef.h /usr/include/c++/12.1.0/cstring \
  /usr/include/c++/12.1.0/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/12.1.0/x86_64-pc-linux-gnu/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -7,8 +7,11 @@ CMakeFiles/ironlung.dir/src/main.cpp.o: /home/risk/ironlung/src/main.cpp \
  /usr/include/sys/cdefs.h /usr/include/bits/long-double.h \
  /usr/include/gnu/stubs.h /usr/include/gnu/stubs-64.h \
  /usr/include/c++/12.1.0/x86_64-pc-linux-gnu/bits/cpu_defines.h \
- /usr/include/c++/12.1.0/pstl/pstl_config.h /usr/include/time.h \
+ /usr/include/c++/12.1.0/pstl/pstl_config.h /usr/include/string.h \
+ /usr/include/bits/libc-header-start.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/include/stddef.h \
+ /usr/include/bits/types/locale_t.h /usr/include/bits/types/__locale_t.h \
+ /usr/include/strings.h /usr/include/c++/12.1.0/ctime /usr/include/time.h \
  /usr/include/bits/time.h /usr/include/bits/types.h \
  /usr/include/bits/typesizes.h /usr/include/bits/time64.h \
  /usr/include/bits/timex.h /usr/include/bits/types/struct_timeval.h \
@@ -18,14 +21,13 @@ CMakeFiles/ironlung.dir/src/main.cpp.o: /home/risk/ironlung/src/main.cpp \
  /usr/include/bits/endianness.h /usr/include/bits/types/clockid_t.h \
  /usr/include/bits/types/timer_t.h \
  /usr/include/bits/types/struct_itimerspec.h \
- /usr/include/bits/types/locale_t.h /usr/include/bits/types/__locale_t.h \
  /usr/include/c++/12.1.0/iostream /usr/include/c++/12.1.0/ostream \
  /usr/include/c++/12.1.0/ios /usr/include/c++/12.1.0/iosfwd \
  /usr/include/c++/12.1.0/bits/stringfwd.h \
  /usr/include/c++/12.1.0/bits/memoryfwd.h \
  /usr/include/c++/12.1.0/bits/postypes.h /usr/include/c++/12.1.0/cwchar \
- /usr/include/wchar.h /usr/include/bits/libc-header-start.h \
- /usr/include/bits/floatn.h /usr/include/bits/floatn-common.h \
+ /usr/include/wchar.h /usr/include/bits/floatn.h \
+ /usr/include/bits/floatn-common.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/include/stdarg.h \
  /usr/include/bits/wchar.h /usr/include/bits/types/wint_t.h \
  /usr/include/bits/types/mbstate_t.h \
@@ -184,14 +186,12 @@ CMakeFiles/ironlung.dir/src/main.cpp.o: /home/risk/ironlung/src/main.cpp \
  /usr/include/linux/close_range.h /usr/include/bits/ss_flags.h \
  /usr/include/bits/types/struct_sigstack.h /usr/include/bits/sigthread.h \
  /usr/include/bits/signal_ext.h /usr/include/c++/12.1.0/cstdarg \
- /usr/include/c++/12.1.0/cstddef /usr/include/c++/12.1.0/cstring \
- /usr/include/string.h /usr/include/strings.h \
- /usr/include/c++/12.1.0/ccomplex /usr/include/c++/12.1.0/complex \
- /usr/include/c++/12.1.0/sstream /usr/include/c++/12.1.0/bits/sstream.tcc \
- /usr/include/c++/12.1.0/cfenv /usr/include/c++/12.1.0/fenv.h \
- /usr/include/fenv.h /usr/include/bits/fenv.h \
- /usr/include/c++/12.1.0/cinttypes /usr/include/inttypes.h \
- /usr/include/c++/12.1.0/cstdalign \
+ /usr/include/c++/12.1.0/cstddef /usr/include/c++/12.1.0/ccomplex \
+ /usr/include/c++/12.1.0/complex /usr/include/c++/12.1.0/sstream \
+ /usr/include/c++/12.1.0/bits/sstream.tcc /usr/include/c++/12.1.0/cfenv \
+ /usr/include/c++/12.1.0/fenv.h /usr/include/fenv.h \
+ /usr/include/bits/fenv.h /usr/include/c++/12.1.0/cinttypes \
+ /usr/include/inttypes.h /usr/include/c++/12.1.0/cstdalign \
  /usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/include/stdalign.h \
  /usr/include/c++/12.1.0/cstdbool \
  /usr/lib/gcc/x86_64-pc-linux-gnu/12.1.0/include/stdbool.h \
@@ -441,4 +441,5 @@ CMakeFiles/ironlung.dir/src/main.cpp.o: /home/risk/ironlung/src/main.cpp \
  /home/risk/ironlung/include/mouse.hpp \
  /home/risk/ironlung/include/polygon.hpp \
  /home/risk/ironlung/include/rainbow.hpp \
- /home/risk/ironlung/include/sync.hpp
+ /home/risk/ironlung/include/sync.hpp \
+ /home/risk/ironlung/include/camera.hpp
