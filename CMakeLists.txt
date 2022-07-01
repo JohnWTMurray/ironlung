@@ -9,7 +9,7 @@ project(ironlung VERSION 0.1.0)
 include_directories(src)
 
 
-add_executable(ironlung src/main.cpp src/game.cpp src/line.cpp src/gameobject.cpp src/polygon.cpp src/rainbow.cpp src/mouse.cpp src/sync.cpp)
+add_executable(ironlung src/main.cpp src/game.cpp src/line.cpp src/gameobject.cpp src/polygon.cpp src/rainbow.cpp src/mouse.cpp src/sync.cpp src/camera.cpp)
 target_include_directories(ironlung PRIVATE include/)
 
 

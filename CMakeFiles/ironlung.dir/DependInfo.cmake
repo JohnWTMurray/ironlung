@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/risk/ironlung/src/camera.cpp" "CMakeFiles/ironlung.dir/src/camera.cpp.o" "gcc" "CMakeFiles/ironlung.dir/src/camera.cpp.o.d"
   "/home/risk/ironlung/src/game.cpp" "CMakeFiles/ironlung.dir/src/game.cpp.o" "gcc" "CMakeFiles/ironlung.dir/src/game.cpp.o.d"
   "/home/risk/ironlung/src/gameobject.cpp" "CMakeFiles/ironlung.dir/src/gameobject.cpp.o" "gcc" "CMakeFiles/ironlung.dir/src/gameobject.cpp.o.d"
   "/home/risk/ironlung/src/line.cpp" "CMakeFiles/ironlung.dir/src/line.cpp.o" "gcc" "CMakeFiles/ironlung.dir/src/line.cpp.o.d"

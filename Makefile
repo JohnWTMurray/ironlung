@@ -129,6 +129,30 @@ ironlung/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ironlung.dir/build.make CMakeFiles/ironlung.dir/build
 .PHONY : ironlung/fast
 
+src/camera.o: src/camera.cpp.o
+.PHONY : src/camera.o
+
+# target to build an object file
+src/camera.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ironlung.dir/build.make CMakeFiles/ironlung.dir/src/camera.cpp.o
+.PHONY : src/camera.cpp.o
+
+src/camera.i: src/camera.cpp.i
+.PHONY : src/camera.i
+
+# target to preprocess a source file
+src/camera.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ironlung.dir/build.make CMakeFiles/ironlung.dir/src/camera.cpp.i
+.PHONY : src/camera.cpp.i
+
+src/camera.s: src/camera.cpp.s
+.PHONY : src/camera.s
+
+# target to generate assembly for a file
+src/camera.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ironlung.dir/build.make CMakeFiles/ironlung.dir/src/camera.cpp.s
+.PHONY : src/camera.cpp.s
+
 src/game.o: src/game.cpp.o
 .PHONY : src/game.o
 
@@ -330,6 +354,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... ironlung"
+	@echo "... src/camera.o"
+	@echo "... src/camera.i"
+	@echo "... src/camera.s"
 	@echo "... src/game.o"
 	@echo "... src/game.i"
 	@echo "... src/game.s"

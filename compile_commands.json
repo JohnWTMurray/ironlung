@@ -38,5 +38,10 @@
   "directory": "/home/risk/ironlung",
   "command": "/usr/bin/c++  -I/home/risk/ironlung/src -I/home/risk/ironlung/include -g -o CMakeFiles/ironlung.dir/src/sync.cpp.o -c /home/risk/ironlung/src/sync.cpp",
   "file": "/home/risk/ironlung/src/sync.cpp"
+},
+{
+  "directory": "/home/risk/ironlung",
+  "command": "/usr/bin/c++  -I/home/risk/ironlung/src -I/home/risk/ironlung/include -g -o CMakeFiles/ironlung.dir/src/camera.cpp.o -c /home/risk/ironlung/src/camera.cpp",
+  "file": "/home/risk/ironlung/src/camera.cpp"
 }
 ]

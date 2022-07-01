@@ -46,7 +46,7 @@ class Game {
 	Mouse* pmouse;
 	Rainbow* rain;
 
-	void gameloop();
+	void loop();
 	void render();
 
 	Game(); // Constructor 

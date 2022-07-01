@@ -72,7 +72,7 @@ void Game::render() {
 	SDL_RenderPresent(prender);
 }
 
-void Game::gameloop() {
+void Game::loop() {
 	// SDL_Delay(10000); // sleeps for 10 seconds
 	bool live = true;
 	SDL_Event event;
@@ -118,7 +118,7 @@ Game::Game() { // constructor
 			// rain = new Rainbow(prender, 5, Point{ 20, 40 }, 100, 200);
 			pmouse = Mouse::get_mouse_instance(prender);
 			cameras.push_back(Camera({0, 0}, &polygons, HEIGHT, WIDTH));
-			gameloop();
+			loop();
 		}
 		else {
 			printf("initilised window, but could not init renderer for some reason\n");
