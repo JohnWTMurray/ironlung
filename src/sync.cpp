@@ -2,8 +2,8 @@
 
 Sync* Sync::pinstance;
 
-// formatted as singleton
-Sync* Sync::get_instance() {
+// formatted as singleton STATIC
+Sync* Sync::get_instance() { 
 	if (Sync::pinstance)
 		Sync::pinstance = new Sync();
 	return Sync::pinstance;

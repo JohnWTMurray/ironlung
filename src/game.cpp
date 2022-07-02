@@ -36,7 +36,8 @@ Game::~Game() { // deconstructor
 	delete(this->sync);
 	delete(this->psurface);
 	delete(this->pmouse);
-	delete(this->rain);
+	if (this->rain)
+		delete(this->rain);
 
 	SDL_DestroyRenderer(this->prender);
 	SDL_DestroyWindow(this->pwindow);
@@ -63,7 +64,8 @@ void Game::render() {
 		for (Polygon* p : polygons)
 			p->render_self();
 	
-	rain->render_self();
+	if (rain)
+		rain->render_self();
 	pmouse->render();
 
 	SDL_SetRenderDrawColor(this->prender, 0, 255, 0, SDL_ALPHA_OPAQUE); // lime green
